@@ -1,0 +1,9 @@
+{
+  "name": "typingboard",
+  "version": "1.0.0",
+  "description": "Teclado interactivo para practicar mecanografía",
+  "main": "index.html",
+  "repository": "git@github.com:JuanesGalvis/Typingboard.git",
+  "author": "JuanesGalvis <juangalvis.sh@gmail.com>",
+  "license": "MIT"
+}
