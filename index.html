@@ -6,43 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typingboard</title>
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    <script defer src="./index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
 </head>
 <body>
-    <h1>⌨ Typingboard ⌨</h1>
     <header>
-        Palabra a escribir:
+        <h1>⌨ Typingboard ⌨</h1>
+        <h2>Palabra a escribir:</h2>
         <div id="game"></div>
     </header>
     <main class="keyboard">
         <section class="keyboard_letters">
             <div class="keyboard_letters__functions">
-                <div class="keyboard_letters__functions--esc"></div>
-                <div class="keyboard_letters__functions--f14"></div>
-                <div class="keyboard_letters__functions--f58"></div>
-                <div class="keyboard_letters__functions--f912"></div>
+                <div class="keyboard_letters__functions--esc">
+                    <div class="key key-W-1 key-H-1" id="Escape">Esc</div>
+                </div>
+                <div class="keyboard_letters__functions--keys">
+                    <div class="key key-W-1 key-H-1">F1</div>
+                    <div class="key key-W-1 key-H-1">F2</div>
+                    <div class="key key-W-1 key-H-1">F3</div>
+                    <div class="key key-W-1 key-H-1">F4</div>
+                </div>
+                <div class="keyboard_letters__functions--keys">
+                    <div class="key key-W-1 key-H-1">F5</div>
+                    <div class="key key-W-1 key-H-1">F6</div>
+                    <div class="key key-W-1 key-H-1">F7</div>
+                    <div class="key key-W-1 key-H-1">F8</div>
+                </div>
+                <div class="keyboard_letters__functions--keys">
+                    <div class="key key-W-1 key-H-1">F9</div>
+                    <div class="key key-W-1 key-H-1">F10</div>
+                    <div class="key key-W-1 key-H-1">F11</div>
+                    <div class="key key-W-1 key-H-1">F12</div>
+                </div>
             </div>
-            <div class="keyboard_letters__content"></div>
+            <div class="keyboard_letters__content">
+                <!-- Fila #1 -->
+                <div id="|" class="key key-W-1 key-H-1">°</div>
+                <div id="1" class="key key-W-1 key-H-1">1</div>
+                <div id="2" class="key key-W-1 key-H-1">2</div>
+                <div id="3" class="key key-W-1 key-H-1">3</div>
+                <div id="4" class="key key-W-1 key-H-1">4</div>
+                <div id="5" class="key key-W-1 key-H-1">5</div>
+                <div id="6" class="key key-W-1 key-H-1">6</div>
+                <div id="7" class="key key-W-1 key-H-1">7</div>
+                <div id="8" class="key key-W-1 key-H-1">8</div>
+                <div id="9" class="key key-W-1 key-H-1">9</div>
+                <div id="0" class="key key-W-1 key-H-1">0</div>
+                <div id="Minus" class="key key-W-1 key-H-1">?</div>
+                <div id="¿" class="key key-W-1 key-H-1">¿</div>
+                <div id="Backspace" class="key key-W-1 key-H-1">⬅</div>
+                <!-- Fila #2 -->
+                <div id="Tab" class="key key-W-1 key-H-1">Tab</div>
+                <div id="Q" class="key key-W-1 key-H-1">Q</div>
+                <div id="W" class="key key-W-1 key-H-1">W</div>
+                <div id="E" class="key key-W-1 key-H-1">E</div>
+                <div id="R" class="key key-W-1 key-H-1">R</div>
+                <div id="T" class="key key-W-1 key-H-1">T</div>
+                <div id="Y" class="key key-W-1 key-H-1">Y</div>
+                <div id="U" class="key key-W-1 key-H-1">U</div>
+                <div id="I" class="key key-W-1 key-H-1">I</div>
+                <div id="O" class="key key-W-1 key-H-1">O</div>
+                <div id="P" class="key key-W-1 key-H-1">P</div>
+                <div id="BracketLeft" class="key key-W-1 key-H-1">´</div>
+                <div id="BracketRight" class="key key-W-1 key-H-1">+</div>
+                <div id="Enter" class="key key-W-1 key-H-2">ENTER</div>
+                <!-- Fila #3 -->
+                <div id="CapsLock" class="key key-W-1 key-H-1">Mayus</div>
+                <div id="A" class="key key-W-1 key-H-1">A</div>
+                <div id="S" class="key key-W-1 key-H-1">S</div>
+                <div id="D" class="key key-W-1 key-H-1">D</div>
+                <div id="F" class="key key-W-1 key-H-1">F</div>
+                <div id="G" class="key key-W-1 key-H-1">G</div>
+                <div id="H" class="key key-W-1 key-H-1">H</div>
+                <div id="J" class="key key-W-1 key-H-1">J</div>
+                <div id="K" class="key key-W-1 key-H-1">K</div>
+                <div id="L" class="key key-W-1 key-H-1">L</div>
+                <div id="Ñ" class="key key-W-1 key-H-1">Ñ</div>
+                <div id="{" class="key key-W-1 key-H-1">{</div>
+                <div id="}" class="key key-W-1 key-H-1">}</div>
+                <!-- Fila #4 -->
+                <div id="ShiftLeft" class="key key-W-1 key-H-1">Shift</div>
+                <div id="IntlBackslash" class="key key-W-1 key-H-1">></div>
+                <div id="Z" class="key key-W-1 key-H-1">Z</div>
+                <div id="X" class="key key-W-1 key-H-1">X</div>
+                <div id="C" class="key key-W-1 key-H-1">C</div>
+                <div id="V" class="key key-W-1 key-H-1">V</div>
+                <div id="B" class="key key-W-1 key-H-1">B</div>
+                <div id="N" class="key key-W-1 key-H-1">N</div>
+                <div id="M" class="key key-W-1 key-H-1">M</div>
+                <div id="," class="key key-W-1 key-H-1">,</div>
+                <div id="Period" class="key key-W-1 key-H-1">.</div>
+                <div id="Slash" class="key key-W-1 key-H-1">-</div>
+                <div id="ShiftRight" class="key key-W-2 key-H-1">Shift</div>
+                <!-- Fila #5 -->
+                <div id="ControlLeft" class="key key-W-1 key-H-1">Ctrl</div>
+                <div id="MetaLeft" class="key key-W-1 key-H-1">Win</div>
+                <div id="Alt" class="key key-W-1 key-H-1">Alt</div>
+                <div id=" " class="key key-W-7 key-H-1">___</div>
+                <div id="AltGraph" class="key key-W-1 key-H-1">Alt</div>
+                <div class="key key-W-1 key-H-1">FN</div>
+                <div id="ContextMenu" class="key key-W-1 key-H-1">🖱</div>
+                <div id="ControlRight" class="key key-W-1 key-H-1">Ctrl</div>
+            </div>
         </section>
         <section class="keyboard__arrows">
-            <div class="keyboard__arrows__functions"></div>
-            <div class="keyboard__arrows__navigate"></div>
-            <div class="keyboard__arrows__content">
-                <div class="keyboard__arrows__content--left"></div>
-                <div class="keyboard__arrows__content--top"></div>
-                <div class="keyboard__arrows__content--bottom"></div>
-                <div class="keyboard__arrows__content--right"></div>
+            <div class="keyboard__arrows__functions">
+                <div id="PrintScreen" class="key key-W-1 key-H-1">Impr</div>
+                <div id="ScrollLock" class="key key-W-1 key-H-1">Bloq</div>
+                <div id="Pause" class="key key-W-1 key-H-1">Paus</div>
             </div>
-            <div></div>
+            <div class="keyboard__arrows__navigate">
+                <div id="Insert" class="key key-W-1 key-H-1">Insert</div>
+                <div id="Home" class="key key-W-1 key-H-1">Inicio</div>
+                <div id="PageUp" class="key key-W-1 key-H-1">Re Pag</div>
+                <div id="Delete" class="key key-W-1 key-H-1">Supr</div>
+                <div id="End" class="key key-W-1 key-H-1">Fin</div>
+                <div id="PageDown" class="key key-W-1 key-H-1">Av Pag</div>
+            </div>
+            <div class="keyboard__arrows__content">
+                <div id="ArrowUp" class="key keyboard__arrows__content--top">⬆</div>
+                <div id="ArrowLeft" class="key keyboard__arrows__content--left">⬅</div>
+                <div id="ArrowDown" class="key keyboard__arrows__content--bottom">⬇</div>
+                <div id="ArrowRight" class="key keyboard__arrows__content--right">➡</div>
+            </div>
         </section>
         <section class="keyboard__numbers">
             <div class="keyboard__numbers__leds">
-                <div class="keyboard__numbers__leds--numbers"></div>
-                <div class="keyboard__numbers__leds--uppercase"></div>
-                <div class="keyboard__numbers__leds--scroll"></div>
+                <div class="keyboard__numbers__leds--numbers">
+                    <div class="led active"></div>
+                </div>
+                <div class="keyboard__numbers__leds--uppercase">
+                    <div class="led"></div>
+                </div>
+                <div class="keyboard__numbers__leds--scroll">
+                    <div class="led"></div>
+                </div>
             </div>
-            <div class="keyboard__numbers__content"></div>
+            <div class="keyboard__numbers__content">
+                <!-- Fila #1 -->
+                <div id="NumLock" class="key key-W-1 key-H-1">Bloq</div>
+                <div id="/" class="key key-W-1 key-H-1">/</div>
+                <div id="*" class="key key-W-1 key-H-1">*</div>
+                <div id="NumpadSubtract" class="key key-W-1 key-H-1">-</div>
+                <!-- Fila #2 -->
+                <div id="Numpad7" class="key key-W-1 key-H-1">7</div>
+                <div id="Numpad8" class="key key-W-1 key-H-1">8</div>
+                <div id="Numpad9" class="key key-W-1 key-H-1">9</div>
+                <div id="NumpadAdd" class="key key-W-1 key-H-2">+</div>
+                <!-- Fila #3 -->
+                <div id="Numpad4" class="key key-W-1 key-H-1">4</div>
+                <div id="Numpad5" class="key key-W-1 key-H-1">5</div>
+                <div id="Numpad6" class="key key-W-1 key-H-1">6</div>
+                <!-- Fila #3 -->
+                <div id="Numpad1" class="key key-W-1 key-H-1">1</div>
+                <div id="Numpad2" class="key key-W-1 key-H-1">2</div>
+                <div id="Numpad3" class="key key-W-1 key-H-1">3</div>
+                <div id="NumpadEnter" class="key key-W-1 key-H-2">Intro</div>
+                <!-- Fila #4 -->
+                <div id="Numpad0" class="key key-W-2 key-H-1">0</div>
+                <div id="NumpadDecimal" class="key key-W-1 key-H-1">.</div>
+            </div>
         </section>
     </main>
+    <footer>
+        <h3>Tecla presionada:</h3>
+        <div id="keypress"></div>
+    </footer>
 </body>
 </html>

@@ -1,30 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow-y: hidden;
+    background-image: linear-gradient( 103.3deg,  rgba(252,225,208,1) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
+}
+
+header, footer {
+    text-align: center;
+    font-size: 28px;
+}
+
 .keyboard {
+    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+    color: white;
     display: grid;
     grid-template-columns: 80% 10% 10%;
     place-content: center;
     gap: 10px;
     width: 90vw;
-    margin: 0 auto;
+    margin: 15px auto;
     border-radius: 10px;
-    padding: 5px;
+    padding: 22px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
 }
+
+/* FILA FUNCIONES */
 
 .keyboard_letters__functions {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
+
+.keyboard_letters__functions--keys {
+    display: flex;
+    justify-content: space-between;
+}
+
+.keyboard_letters__functions--keys .key {
+    padding: 0px 10px;
+    margin: 0px 5px;
+}
+
+/* FILAS LETRAS */
 
 .keyboard_letters__content {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     place-content: center;
-    gap: 5px;
+    gap: 8px;
 }
 
+/* CENTRO FLECHAS */
+
+.keyboard__arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.keyboard__arrows__functions,
+.keyboard__arrows__navigate,
 .keyboard__arrows__content {
     display: grid;
+    gap: 5px;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.keyboard__arrows__content--top {
+    grid-column: 2;
+}
+
+.keyboard__arrows__content--left,
+.keyboard__arrows__content--bottom,
+.keyboard__arrows__content--right {
+    grid-row: 2;
+}
+
+/* TECLADO NÚMERICO */
+
+.keyboard__numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .keyboard__numbers__leds {
@@ -32,7 +94,77 @@
     justify-content: space-around;
 }
 
+.led {
+    text-align: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+}
+
+.led.active {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(87,195,155,1) 0%, rgba(155,218,71,0.66) 76.9% );
+}
+
 .keyboard__numbers__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+/* TECLAS EN GÉNERAL Y TAMAÑOS */
+
+.key {
+    width: 100%;
+    border-radius: 5px;
+    border: 0.2px solid rgba(255,255,255,0.5);
+    text-align: center;
+    animation: LucesRGB 5s infinite;
+    transition: box-shadow 1s;
+}
+
+@keyframes LucesRGB {
+    0% {
+        box-shadow: 0 0 1px 1px rgba(37,145,251,0.98); 
+    }
+    20% {
+        box-shadow: 0 0 1px 1px rgba(160,253,145,1); 
+    }
+    40% {
+        box-shadow: 0 0 1px 1px rgba(179,100,190,1); 
+    }
+    60% {
+        box-shadow: 0 0 1px 1px rgba(240,30,92,1); 
+    }
+    80% {
+        box-shadow: 0 0 1px 1px rgba(255,209,67,1); 
+    }
+    100% {
+        box-shadow: 0 0 1px 1px rgba(181,255,255,1); 
+    }
+}
+
+.key:not(.key-H-2) {
+    height: 25px;
+    line-height: 25px;
+}
+
+.key-W-2 {
+    grid-column-end: span 2;
+}
+
+.key-H-2 {
+    grid-row-end: span 2;
+    line-height: 50px;
+    width: 100%;
+}
+
+.key-W-7 {
+    grid-column-end: span 7;
+}
+
+.keypress {
+    background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);
+    transform: scale(0.9);
+    transition: transform 2s;
 }
