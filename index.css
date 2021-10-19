@@ -13,18 +13,33 @@ header, footer {
 }
 
 .keyboard {
-    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
-    color: white;
     display: grid;
-    grid-template-columns: 80% 10% 10%;
+    grid-template-columns: 80% 13% 13%;
     place-content: center;
     gap: 10px;
-    width: 90vw;
+    width: 70vw;
     margin: 15px auto;
     border-radius: 10px;
-    padding: 22px;
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: 15px 65px;
     font-size: 12px;
+}
+
+.light {
+    /* background-image: linear-gradient( to bottom,  rgba(156,177,248,1) 7.5%, rgba(153,247,243,1) 93.1% ); */
+    background-color: white;
+    box-shadow: 0 2px 2px 2px rgba(250, 250, 250, 0.5);
+    color: black;
+}
+
+.dark {
+    background-image: linear-gradient(to bottom, #141E30, #243B55);
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#theme {
+    padding: 5px 10px;
+    border-radius: 10px;   
 }
 
 /* FILA FUNCIONES */
@@ -163,8 +178,21 @@ header, footer {
     grid-column-end: span 7;
 }
 
+.key-W-7::after {
+    content: '__';
+}
+
+.light .keypress {
+    color: white;
+}
+
 .keypress {
     background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);
     transform: scale(0.9);
     transition: transform 2s;
+}
+
+/* letras del juego */
+.actual {
+    color: rgba(37,145,251,0.98);
 }
