@@ -86,6 +86,10 @@ header, footer {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.keyboard__arrows__navigate {
+    font-size: 10px;
+}
+
 .keyboard__arrows__content--top {
     grid-column: 2;
 }
